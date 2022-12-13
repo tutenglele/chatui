@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<!--一个框体包括 窗口stage， 场景scene 布局pane 控件button-->
+<!--整体外框，整体面板，设定宽高，引入css样式-->
+<Pane id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="415" prefWidth="540" stylesheets="@css/login.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <!--        操作栏最小化关闭-->
+        <Pane id="operation" prefHeight="158" prefWidth="540">
+            <children>
+                <Label id="login_logo" layoutX="10" layoutY="5" prefHeight="15" prefWidth="200" style="-fx-text-fill: #666666;" styleClass="logo" text="傻子聊天" />
+
+                <Button id="login_min" layoutX="454" prefHeight="32" prefWidth="43" styleClass="min" />
+                <Button id="login_close" layoutX="497" prefHeight="32" prefWidth="43" styleClass="close" />
+            </children>
+        </Pane>
+        <Pane id="headImg" layoutX="80" layoutY="200" prefHeight="100" prefWidth="100" />
+        <TextField id="userId" layoutX="200.0" layoutY="200.0" prefWidth="250" prefHeight="45" promptText="账号">
+            <padding>
+                <Insets left="10"/>
+            </padding>
+        </TextField>
+        <PasswordField id="userPassword" layoutX="200" layoutY="255" prefWidth="250" prefHeight="45" promptText="输入密码">
+            <padding>
+                <Insets left="10"/>
+            </padding>
+        </PasswordField>
+        <Button id="login_button" styleClass="login_button" layoutX="200" layoutY="345" prefWidth="250" prefHeight="45" text="登 录" />
+        <Label layoutX="5" layoutY="398" prefWidth="400" prefHeight="15" text="v1.0">
+            <font>
+                <Font size="12"/>
+            </font>
+        </Label>
+    </children>
+</Pane>
